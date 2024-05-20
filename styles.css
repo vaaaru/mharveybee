@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.music-player {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+}
+
+audio {
+  width: 100%;
+  outline: none;
+}
+
+.playlist {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+.playlist label {
+  display: block;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.playlist input[type="radio"] {
+  display: none;
+}
+
+.playlist input[type="radio"] + label:hover {
+  background: #444;
+}
+
+.playlist input[type="radio"]:checked + label {
+  background: #555;
+}
