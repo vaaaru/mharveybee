@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="music-player">
+    <audio id="audio" controls>
+      <source id="audioSource" src="song1.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="playlist">
+      <input type="radio" id="song1" name="song" value="https://puu.sh/K7gRj/986f1e8596.mp3" checked>
+      <label for="song1">Post</label><br>
+      <input type="radio" id="song2" name="song" value="https://puu.sh/K7gWu/349b2ad87f.mp3">
+      <label for="song2">J-Jazz</label><br>
+      <input type="radio" id="song3" name="song" value="https://puu.sh/K7gRj/986f1e8596.mp3">
+      <label for="song3">punky</label>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('audio');
+      const radioButtons = document.querySelectorAll('input[name="song"]');
+      
+      radioButtons.forEach(radio => {
+        radio.addEventListener('change', () => {
+          audio.src = radio.value;
+          audio.play();
+        });
+      });
+    });
+  </script>
+</body>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
+</body>
+</html>
