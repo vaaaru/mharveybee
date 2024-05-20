@@ -31,7 +31,7 @@ audio {
 .playlist label {
   display: block;
   cursor: pointer;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .playlist input[type="radio"] {
