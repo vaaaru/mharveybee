@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M. Harvey Bee</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Harvey Bee</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--All icons were found at Flaticon-->
+
 </head>
+
 <body>
-  <div class="music-player">
-    <audio id="audio" controls>
-      <source id="audioSource" src="song1.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="playlist">
-      <input type="radio" id="song1" name="song" value="https://puu.sh/K7gRj/986f1e8596.mp3" checked>
-      <label for="song1">Post</label><br>
-      <input type="radio" id="song2" name="song" value="https://puu.sh/K7gWu/349b2ad87f.mp3">
-      <label for="song2">J-Jazz</label><br>
-      <input type="radio" id="song3" name="song" value="https://puu.sh/K7gRj/986f1e8596.mp3">
-      <label for="song3">punky</label>
-    </div>
-  </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('audio');
-      const radioButtons = document.querySelectorAll('input[name="song"]');
-      
-      radioButtons.forEach(radio => {
-        radio.addEventListener('change', () => {
-          audio.src = radio.value;
-          audio.play();
-        });
-      });
-    });
-  </script>
+    <header class="heady1">
+        <h1>M. Harvey Bee</h1>
+        <nav class="navy1">
+            <ul>
+                <li><a href="https://mharveybee.bandcamp.com/music">Bandcamp</a></li>
+                <li><a href="https://open.spotify.com/artist/2OiCKnu0hUpebSHpqi04fj">Spotify</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="bioBEE">
+            <section class="bio">
+                <p>Hi! My name is Val and I'm here to write the coolest soundtrack for your work, be it a
+                    videogame or something entirely different. <br />
+                    <br />My music has a diverse sonic range but most of it sounds close to rock, electronic music or
+                    chiptune.
+                    Here's what I can offer you:
+                </p>
+                <ul class="dashed-list">
+                    <b>
+                        <li>Creative individual approach;</li>
+                        <li>Will to experiment;</li>
+                        <li>Good communication;</li>
+                        <li>Flexible prices because everybody's budget is different!</li>
+                    </b>
+                </ul>
+            </section>
+            <div class="BEE">
+                <img src="assets/johnny_logo.png">
+            </div>
+        </div>
+
+        <section id="player">
+            <p>playur</p>
+        </section>
+
+        <section class="contactme">
+            <div>
+                <h2>Ways to contact me</h2>
+                <ul class="contactlist">
+                    <li><a href="mailto:varubaru8@gmail.com"><img src="assets/mail.png"></a></li>
+                    <li><a href="https://discord.com/users/vaaaru"><img src="assets/discord.png"></a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Domestic_pigeon"><img src="assets/pigeon.png"></li>
+                    </a>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright © 2024 Valerii Barisev</p>
+        </footer>
+    </main>
 </body>
-<div>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pageses :)</p>
-</body>
-</div>
-</html>

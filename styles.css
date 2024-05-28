@@ -1,47 +1,146 @@
+.heady1 {
+    background: linear-gradient(#00ccff71, rgba(0, 0, 0, 0.5)), url('assets/gras.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 35px 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.heady1 h1 {
+    margin: 0;
+    font-size: 3.5em;
+}
+
+.navy1 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;    
+}
+
+.navy1 li {
+    margin: 0 15px;
+}
+
+.navy1 a {
+    text-decoration: none;
+    transition: all, 0.2s ease;
+    color: white;
+    font-size: 1.5em;    
+}
+
+.navy1 a:hover {
+    color: aquamarine;
+
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    background-color: rgba(0, 186, 199, 0.041);
 }
 
-.music-player {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  width: 300px;
-  text-align: center;
+.bio {
+    font-size: 25px;
+    font-family: monospace;
 }
 
-audio {
-  width: 100%;
-  outline: none;
+.dashed-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.playlist {
-  background: #333;
-  color: #fff;
-  padding: 15px;
+.dashed-list li::before {
+    content: "— ";
 }
 
-.playlist label {
-  display: block;
-  cursor: pointer;
-  padding: 10px 0;
+.bioBEE {
+    display: flex;
+    width: auto;
+    margin-inline: 400px;
+    padding: 30px;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(31, 31, 31, 0.192);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.playlist input[type="radio"] {
-  display: none;
+.bio,
+.BEE {
+    flex: 1;
+    justify-content: center;
 }
 
-.playlist input[type="radio"] + label:hover {
-  background: #444;
+.BEE {
+    display: flex;
 }
 
-.playlist input[type="radio"]:checked + label {
-  background: #555;
+.BEE img {
+    max-height: 590px;
+    width: auto;
+    object-fit: contain;
+}
+
+.contactme {
+    display: flex;
+    width: auto;
+    margin-inline: 400px;
+    font-family: monospace;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.contactlist {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contactlist li {
+    margin: 0 10px;
+}
+
+.contactlist img {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .heady1 {
+        font-size: 0.8em;
+    }
+
+    .bioBEE {
+        flex-direction: column;
+        width: auto;
+        margin-inline: 5px;
+        padding: 10px;        
+    }
+
+    .bio {
+        font-size: 20px;
+    }
+
+    .BEE {
+        display: flex;
+    }
+
+    .BEE img {
+        max-height: 390px;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    .contactme {
+        margin-inline: 0;
+    }
 }
