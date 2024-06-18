@@ -33,7 +33,6 @@
 
 .navy1 a:hover {
     color: aquamarine;
-
 }
 
 body {
@@ -50,46 +49,54 @@ body {
     padding: 0;
 }
 
+.dashed-list li {
+    font-weight: bold;
+}
+
 .dashed-list li::before {
     content: "— ";
 }
 
 .bioBEE {
     display: flex;
+    gap: 30px;
     width: auto;
-    margin-inline: 400px;
+    margin: 0 16vw;
     padding: 30px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(31, 31, 31, 0.192);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    transition: all .3s ease
 }
 
 .bio,
 .BEE {
     flex: 1;
-    justify-content: center;
 }
 
 .BEE {
     display: flex;
+    justify-content: center;
 }
 
 .BEE img {
-    max-height: 590px;
+    max-height: 30vw;
     width: auto;
     object-fit: contain;
+    transition: all .3s ease;
+    user-select: none;
 }
 
 .contactme {
     display: flex;
     width: auto;
-    margin-inline: 400px;
     font-family: monospace;
     padding: 10px;
     justify-content: center;
     border-radius: 20px;
     font-size: 20px;
+    text-align: center;
 }
 
 .contactlist {
@@ -107,23 +114,41 @@ body {
 .contactlist img {
     width: 50px;
     height: 50px;
+    user-select: none;
 }
 
 footer {
     text-align: center;
+    padding: 12px 0;
 }
 
-@media only screen and (max-width: 768px) {
-    
-    .heady1 {
-        font-size: 0.8em;
+@media only screen and (max-width: 1440px) {
+    .bioBEE {
+        margin: 0 8vw;
     }
 
+    .BEE img {
+        max-height: 40vw;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
     .bioBEE {
         flex-direction: column;
         width: auto;
-        margin-inline: 5px;
-        padding: 10px;        
+        margin: 0;
+    }
+
+    .BEE img {
+        max-height: 50vw;
+        width: auto;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .heady1 {
+        font-size: 0.8em;
     }
 
     .bio {
@@ -135,12 +160,16 @@ footer {
     }
 
     .BEE img {
-        max-height: 390px;
-        width: auto;
-        object-fit: contain;
+        max-height: 55vw;
     }
-    
+
     .contactme {
-        margin-inline: 0;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .BEE img {
+        max-height: 70vw;
     }
 }
